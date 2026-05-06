@@ -1,0 +1,143 @@
+import { db } from "./database/connection.js";
+
+// ========================
+// Repositories
+// ========================
+import VoteDrizzleRepository from "../../modules/votes/infrastructure/repositories/VoteDrizzleRepository.js";
+import RequestDrizzleRepository from "../../modules/requests/infrastructure/repositories/RequestDrizzleRepository.js";
+import GiveToGetProgressDrizzleRepository from "../../modules/give-to-get/infrastructure/repositories/GiveToGetProgressDrizzleRepository.js";
+import BoardDrizzleRepository from "../../modules/boards/infrastructure/repositories/BoardDrizzleRepository.js";
+import UserDrizzleRepository from "../../modules/users/infrastructure/repositories/UserDrizzleRepository.js";
+import NotificationDrizzleRepository from "../../modules/notifications/infrastructure/repositories/NotificationDrizzleRepository.js";
+
+export const voteRepository = new VoteDrizzleRepository(db);
+export const requestRepository = new RequestDrizzleRepository(db);
+export const giveToGetProgressRepository = new GiveToGetProgressDrizzleRepository(db);
+export const boardRepository = new BoardDrizzleRepository(db);
+export const userRepository = new UserDrizzleRepository(db);
+export const notificationRepository = new NotificationDrizzleRepository(db);
+
+// ========================
+// Domain Events
+// ========================
+import VoteCreatedEvent from "../../modules/votes/domain/events/VoteCreatedEvent.js";
+import VoteDeletedEvent from "../../modules/votes/domain/events/VoteDeletedEvent.js";
+import CommentCreatedEvent from "../../modules/comments/domain/events/CommentCreatedEvent.js";
+import CommentDeletedEvent from "../../modules/comments/domain/events/CommentDeletedEvent.js";
+import UserCreatedEvent from "../../modules/users/domain/events/UserCreatedEvent.js";
+import RequestCreatedEvent from "../../modules/requests/domain/events/RequestCreatedEvent.js";
+
+// ========================
+// Event Listeners
+// ========================
+import IncrementVoteCountOnVoteCreated from "../../modules/requests/application/listeners/IncrementVoteCountOnVoteCreated.js";
+import UpdateProgressOnVoteCreated from "../../modules/give-to-get/application/listeners/UpdateProgressOnVoteCreated.js";
+import DecrementVoteCountOnVoteDeleted from "../../modules/requests/application/listeners/DecrementVoteCountOnVoteDeleted.js";
+import RevertProgressOnVoteDeleted from "../../modules/give-to-get/application/listeners/RevertProgressOnVoteDeleted.js";
+import UpdateProgressOnCommentCreated from "../../modules/give-to-get/application/listeners/UpdateProgressOnCommentCreated.js";
+import RevertProgressOnCommentDeleted from "../../modules/give-to-get/application/listeners/RevertProgressOnCommentDeleted.js";
+import SendVerificationEmailOnUserCreated from "../../modules/users/application/listeners/SendVerificationEmailOnUserCreated.js";
+import CreateNotificationsOnVoteCreated from "../../modules/notifications/application/listeners/CreateNotificationsOnVoteCreated.js";
+import CreateNotificationsOnCommentCreated from "../../modules/notifications/application/listeners/CreateNotificationsOnCommentCreated.js";
+import CreateNotificationsOnRequestCreated from "../../modules/notifications/application/listeners/CreateNotificationsOnRequestCreated.js";
+
+// ========================
+// Command Handlers
+// ========================
+import CreateVoteCommandHandler from "../../modules/votes/application/handlers/CreateVoteCommandHandler.js";
+import DeleteVoteCommandHandler from "../../modules/votes/application/handlers/DeleteVoteCommandHandler.js";
+import CreateUserCommandHandler from "../../modules/users/application/handlers/CreateUserCommandHandler.js";
+
+// ========================
+// Services
+// ========================
+import InMemoryAsyncEventBus from "./events/InMemoryAsyncEventBus.js";
+import WebSocketRealtimePublisher from "./services/WebSocketRealtimePublisher.js";
+import ResendEmailSender from "./services/ResendEmailSender.js";
+import ConsoleEmailSender from "./services/ConsoleEmailSender.js";
+import BcryptPasswordHasher from "../../modules/users/infrastructure/services/BcryptPasswordHasher.js";
+
+export const eventBus = new InMemoryAsyncEventBus();
+export const realtimePublisher = new WebSocketRealtimePublisher();
+export const emailSender = process.env.RESEND_API_KEY
+  ? new ResendEmailSender(process.env.RESEND_API_KEY)
+  : new ConsoleEmailSender();
+export const passwordHasher = new BcryptPasswordHasher();
+
+// ========================
+// Event Listeners Instances
+// ========================
+export const incrementVoteCountListener = new IncrementVoteCountOnVoteCreated(requestRepository, realtimePublisher);
+export const updateProgressListener = new UpdateProgressOnVoteCreated(
+  giveToGetProgressRepository,
+  boardRepository,
+  realtimePublisher
+);
+export const decrementVoteCountListener = new DecrementVoteCountOnVoteDeleted(requestRepository, realtimePublisher);
+export const revertProgressListener = new RevertProgressOnVoteDeleted(
+  giveToGetProgressRepository,
+  boardRepository,
+  realtimePublisher
+);
+export const updateProgressOnCommentCreatedListener = new UpdateProgressOnCommentCreated(
+  giveToGetProgressRepository,
+  requestRepository,
+  boardRepository,
+  realtimePublisher
+);
+export const revertProgressOnCommentDeletedListener = new RevertProgressOnCommentDeleted(
+  giveToGetProgressRepository,
+  requestRepository,
+  boardRepository,
+  realtimePublisher
+);
+export const sendVerificationEmailListener = new SendVerificationEmailOnUserCreated(emailSender);
+export const createNotificationsOnVoteCreatedListener = new CreateNotificationsOnVoteCreated(
+  notificationRepository,
+  boardRepository,
+  requestRepository,
+  userRepository,
+  realtimePublisher
+);
+export const createNotificationsOnCommentCreatedListener = new CreateNotificationsOnCommentCreated(
+  notificationRepository,
+  boardRepository,
+  requestRepository,
+  userRepository,
+  realtimePublisher
+);
+export const createNotificationsOnRequestCreatedListener = new CreateNotificationsOnRequestCreated(
+  notificationRepository,
+  boardRepository,
+  userRepository,
+  realtimePublisher
+);
+
+// ========================
+// Subscribe Listeners to Events
+// ========================
+eventBus.subscribe("vote.created", (event: VoteCreatedEvent) => incrementVoteCountListener.handle(event));
+eventBus.subscribe("vote.created", (event: VoteCreatedEvent) => updateProgressListener.handle(event));
+eventBus.subscribe("vote.deleted", (event: VoteDeletedEvent) => decrementVoteCountListener.handle(event));
+eventBus.subscribe("vote.deleted", (event: VoteDeletedEvent) => revertProgressListener.handle(event));
+eventBus.subscribe("comment.created", (event: CommentCreatedEvent) =>
+  updateProgressOnCommentCreatedListener.handle(event)
+);
+eventBus.subscribe("comment.deleted", (event: CommentDeletedEvent) =>
+  revertProgressOnCommentDeletedListener.handle(event)
+);
+eventBus.subscribe("vote.created", (event: VoteCreatedEvent) => createNotificationsOnVoteCreatedListener.handle(event));
+eventBus.subscribe("comment.created", (event: CommentCreatedEvent) =>
+  createNotificationsOnCommentCreatedListener.handle(event)
+);
+eventBus.subscribe("request.created", (event: RequestCreatedEvent) =>
+  createNotificationsOnRequestCreatedListener.handle(event)
+);
+eventBus.subscribe("user.created", (event: UserCreatedEvent) => sendVerificationEmailListener.handle(event));
+
+// ========================
+// Command Handlers Instances
+// ========================
+export const createVoteCommandHandler = new CreateVoteCommandHandler(voteRepository, eventBus);
+export const deleteVoteCommandHandler = new DeleteVoteCommandHandler(voteRepository, eventBus);
+export const createUserCommandHandler = new CreateUserCommandHandler(userRepository, passwordHasher, eventBus);

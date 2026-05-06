@@ -1,0 +1,408 @@
+{
+  "GiveToGet": {
+    "title": "El teu progrés de contribució",
+    "loginHint": "Inicia sessió per seguir el teu progrés de contribució en aquest tauler",
+    "unlocked": "Has desbloquejat la capacitat de publicar!",
+    "locked": "Necessites {votes} vots més i {comments} comentaris més per publicar una petició"
+  },
+  "BoardsEntryGate": {
+    "title": "Els teus taulers",
+    "subtitle": "Gestiona els teus taulers personals i els taulers als quals t'has unit.",
+    "importBoard": "Importar tauler",
+    "createBoard": "Crear tauler",
+    "dialogTitle": "Crea un tauler nou",
+    "dialogDescription": "Respon aquestes preguntes ràpides per configurar el teu espai",
+    "emptyTitle": "Encara no hi ha taulers",
+    "emptyDescription": "Encara no has creat cap tauler. Comença creant el primer",
+    "personalTitle": "Taulers personals",
+    "personalDescription": "Taulers que poses i controles.",
+    "personalEmpty": "Encara no tens taulers personals.",
+    "joinedTitle": "Taulers units",
+    "joinedDescription": "Taulers en els quals participes com a membre.",
+    "joinedEmpty": "Encara no t'has unit a cap tauler.",
+    "noDescription": "Encara sense descripció"
+  },
+  "CreateBoardForm": {
+    "validation": {
+      "nameMin": "El nom ha de tenir almenys 3 caràcters.",
+      "slugMin": "El slug ha de tenir almenys 3 caràcters.",
+      "slugPattern": "Utilitza nomes minúscules, números i guions"
+    },
+    "errors": {
+      "unauthenticated": "No estas autenticat",
+      "createFailed": "Error en crear el tauler"
+    },
+    "success": {
+      "created": "Tauler creat correctament"
+    },
+    "fields": {
+      "name": {
+        "label": "Nom del producte",
+        "placeholder": "Exemple: La Meva Increïble App"
+      },
+      "slug": {
+        "label": "URL / Slug",
+        "placeholder": "la-meva-app"
+      },
+      "description": {
+        "label": "Descripció (Opcional)",
+        "placeholder": "Un resum breu del teu projecte..."
+      }
+    },
+    "actions": {
+      "creating": "Creant...",
+      "create": "Crear tauler"
+    }
+  },
+  "LoginForm": {
+    "validation": {
+      "email": "Introdueix un correu electrònic vàlid",
+      "password": "La contrasenya és obligatòria"
+    },
+    "errors": {
+      "readToken": "No s'ha pogut llegir el token d'autenticació",
+      "invalidToken": "Token d'autenticació invalid",
+      "invalidCredentialsOrRegister": "No hem trobat cap compte amb aquestes dades. Prova de registrar-te primer",
+      "generic": "No s'ha pogut iniciar sessió ara. Torna-ho a provar"
+    },
+    "title": "Benvingut de nou",
+    "subtitle": "Inicia sessió al teu compte d'UpQuit",
+    "fields": {
+      "email": {
+        "label": "Correu",
+        "placeholder": "m@example.com"
+      },
+      "password": {
+        "label": "Contrasenya",
+        "placeholder": "••••••••"
+      }
+    },
+    "forgotPassword": "Has oblidat la contrasenya?",
+    "actions": {
+      "signingIn": "Iniciant sessió...",
+      "login": "Entrar",
+      "signUp": "Registra't"
+    },
+    "orContinueWith": "O continua amb",
+    "loginWithGoogle": "Entrar amb Google",
+    "noAccount": "No tens compte?",
+    "terms": {
+      "prefix": "En continuar, acceptes els nostres",
+      "termsOfService": "Termes del servei",
+      "and": "i",
+      "privacyPolicy": "Politica de privacitat"
+    }
+  },
+  "RegisterForm": {
+    "validation": {
+      "displayName": "El nom visible ha de tenir almenys 2 caràcters",
+      "email": "Introdueix un correu electrònic vàlid",
+      "password": "La contrasenya ha de tenir almenys 8 caràcters",
+      "confirmPassword": "Les contrasenyes no coincideixen"
+    },
+    "errors": {
+      "generic": "No s'ha pogut registrar el compte ara. Torna-ho a provar"
+    },
+    "success": {
+      "created": "Compte creat correctament"
+    },
+    "title": "Crea el teu compte",
+    "subtitle": "Introdueix les teves dades per crear el compte",
+    "fields": {
+      "displayName": {
+        "label": "Nom",
+        "placeholder": "El teu nom"
+      },
+      "email": {
+        "label": "Correu",
+        "placeholder": "info@example.com"
+      },
+      "password": {
+        "label": "Contrasenya",
+        "placeholder": "********"
+      },
+      "confirmPassword": {
+        "label": "Confirmar contrasenya",
+        "placeholder": "********"
+      }
+    },
+    "actions": {
+      "creating": "Creant compte...",
+      "create": "Crear compte",
+      "signIn": "Inicia sessió"
+    },
+    "orContinueWith": "O continua amb",
+    "signUpWithGoogle": "Registra't amb Google",
+    "alreadyHaveAccount": "Ja tens compte?",
+    "terms": {
+      "prefix": "En continuar, acceptes els nostres",
+      "termsOfService": "Termes del servei",
+      "and": "i",
+      "privacyPolicy": "Politica de privacitat"
+    }
+  },
+  "LogoutButton": {
+    "actions": {
+      "logout": "Tancar sessió",
+      "loggingOut": "Tancant sessió..."
+    },
+    "errors": {
+      "generic": "No s'ha pogut tancar la sessió ara. Torna-ho a provar"
+    }
+  },
+  "AppShell": {
+    "workspace": "Espai de producte",
+    "section": "Pla",
+    "boards": {
+      "title": "Taulers",
+      "empty": "Encara no hi ha taulers"
+    },
+    "navigation": {
+      "dashboard": "Dashboard",
+      "overview": "Vista general",
+      "boards": "Taulers",
+      "requests": "Sol-licituds",
+      "team": "Equip",
+      "comments": "Comentaris",
+      "reports": "Informes",
+      "comingSoon": "Properament"
+    },
+    "user": {
+      "name": "Usuari del workspace",
+      "role": "Product owner"
+    },
+    "actions": {
+      "signOut": "Sortir",
+      "logOut": "Tancar sessió",
+      "dashboard": "Dashboard",
+      "settings": "Configuració",
+      "createBoard": "Crear tauler",
+      "createBoardShortcut": "Crear o canviar tauler",
+      "logoutFailed": "No s'ha pogut tancar la sessió ara. Torna-ho a provar"
+    },
+    "settings": {
+      "title": "Configuració del perfil",
+      "description": "Actualitza les dades que es mostren a la sidebar.",
+      "saved": "Perfil actualitzat correctament.",
+      "failed": "No s'ha pogut desar la configuració del perfil.",
+      "validation": {
+        "displayName": "El nom visible ha de tenir almenys 2 caràcters"
+      },
+      "fields": {
+        "displayName": "Nom visible",
+        "avatarUrl": "URL de l'avatar"
+      },
+      "actions": {
+        "cancel": "Cancel-lar",
+        "save": "Desar canvis",
+        "saving": "Desant..."
+      }
+    }
+  },
+  "UpvoteButton": {
+    "mustLogin": "Has d'iniciar sessió per votar",
+    "voteError": "No s'ha pogut registrar el teu vot. Torna-ho a provar"
+  },
+  "RequestCard": {
+    "status": {
+      "planned": "planificat",
+      "in_progréss": "en progrés",
+      "completed": "completat",
+      "rejected": "rebutjat"
+    }
+  },
+  "BoardPage": {
+    "featureRequestsTitle": "Solicituds de funcionalitats",
+    "emptyRequests": "Encara no n'hi han sol·licituds. Sigues el primer a suggerir-ne una!",
+    "actions": {
+      "goToDashboard": "Anar al dashboard",
+      "editSettings": "Editar configuració"
+    }
+  },
+  "BoardMembersPage": {
+    "title": "Equip",
+    "description": "Gestiona qui pot accedir a aquest tauler.",
+    "notFound": "No s'ha trobat el tauler.",
+    "forbidden": "No tens permís per gestionar aquest tauler.",
+    "invite": {
+      "title": "Convida un membre",
+      "description": "Afegeix algú al tauler per correu electrònic.",
+      "placeholder": "nom@example.com",
+      "action": "Afegir membre",
+      "adding": "Afegint..."
+    },
+    "members": {
+      "title": "Membres actuals",
+      "emptyTitle": "Encara no hi ha membres",
+      "emptyDescription": "Convida la primera persona de l'equip per començar.",
+      "role": "Rol",
+      "remove": "Eliminar"
+    },
+    "roles": {
+      "owner": "Propietari",
+      "admin": "Admin",
+      "member": "Membre"
+    },
+    "success": {
+      "added": "Membre afegit correctament.",
+      "removed": "Has eliminat {name} del tauler.",
+      "roleUpdated": "Has actualitzat el rol de {name}."
+    },
+    "errors": {
+      "emailRequired": "Introdueix un correu electrònic.",
+      "addFailed": "No s'ha pogut afegir aquest membre.",
+      "removeFailed": "No s'ha pogut eliminar aquest membre.",
+      "updateRoleFailed": "No s'ha pogut actualitzar el rol d'aquest membre."
+    }
+  },
+  "BoardSettingsPage": {
+    "title": "Configuració del tauler",
+    "description": "Gestiona la identitat del tauler, permisos i regles de participació.",
+    "backToDashboard": "Tornar al dashboard",
+    "notFound": "No s'ha trobat el tauler.",
+    "forbidden": "No tens accés per editar aquest tauler.",
+    "saved": "Configuració del tauler desada.",
+    "saveFailed": "No s'ha pogut desar la configuració del tauler.",
+    "sections": {
+      "profile": "Perfil",
+      "profileDescription": "Marca pública i detalls descriptius.",
+      "permissions": "Accés i vots",
+      "giveToGet": "Give to Get"
+    },
+    "fields": {
+      "name": "Nom del tauler",
+      "slug": "Slug",
+      "description": "Descripció",
+      "logoUrl": "URL del logo",
+      "primaryColor": "Color principal",
+      "isPublic": "Tauler públic",
+      "allowAnonymousVotes": "Permetre vots anònims",
+      "giveToGetEnabled": "Activar Give to Get",
+      "giveToGetVotesReq": "Vots requerits",
+      "giveToGetCommentsReq": "Comentaris requerits"
+    },
+    "hints": {
+      "slug": "S'utilitza a la URL del tauler.",
+      "isPublic": "Permet que qualsevol amb l'enllaç pugui veure el tauler.",
+      "allowAnonymousVotes": "Visitants sense compte poden votar sollicituds.",
+      "giveToGetEnabled": "Requereix participació abans de poder crear sollicituds."
+    },
+    "placeholders": {
+      "name": "Exemple: La Meva Increïble App",
+      "slug": "la-meva-increible-app",
+      "description": "Descriu per a què serveix aquest tauler...",
+      "logoUrl": "https://example.com/logo.png"
+    },
+    "validation": {
+      "nameMin": "El nom del tauler ha de tenir almenys 3 caràcters.",
+      "slugMin": "El slug ha de tenir almenys 3 caràcters.",
+      "slugMax": "El slug no pot superar 63 caràcters.",
+      "slugPattern": "Utilitza només minúscules, números i guions.",
+      "descriptionMax": "La descripció no pot superar 300 caràcters.",
+      "logoUrl": "Introdueix una URL vàlida per al logo.",
+      "primaryColor": "Introdueix un color hexadecimal vàlid com #1e40af.",
+      "giveToGetVotesReq": "Els vots requerits han de ser 0 o més.",
+      "giveToGetCommentsReq": "Els comentaris requerits han de ser 0 o més.",
+      "giveToGetMinimumRule": "Quan Give to Get està activat, vots i comentaris requerits no poden ser tots dos 0."
+    },
+    "actions": {
+      "cancel": "Cancel-lar",
+      "save": "Desar configuració",
+      "saving": "Desant..."
+    },
+    "dangerZone": {
+      "title": "Zona de perill",
+      "description": "Elimina aquest tauler de manera permanent. També s'esborraran totes les sol·licituds, comentaris i vots associats.",
+      "deleteBoard": "Eliminar tauler",
+      "dialogTitle": "Estàs completament segur?",
+      "dialogDescription": "Vols eliminar aquest tauler? Aquesta acció no es pot desfer.",
+      "success": "Tauler eliminat correctament",
+      "failed": "No s'ha pogut eliminar el tauler.",
+      "actions": {
+        "cancel": "Cancel-lar",
+        "confirmDelete": "Confirmar eliminació",
+        "confirming": "Eliminant..."
+      }
+    }
+  },
+  "RequestDetailPage": {
+    "actions": {
+      "delete": "Eliminar sol·licitud"
+    },
+    "deleteDialog": {
+      "title": "Eliminar sol·licitud?",
+      "description": "Vols eliminar aquesta sol·licitud? Els seus comentaris i vots s'esborraran de manera permanent.",
+      "success": "Sol·licitud eliminada correctament",
+      "failed": "No s'ha pogut eliminar la sol·licitud.",
+      "actions": {
+        "cancel": "Cancel-lar",
+        "confirmDelete": "Confirmar eliminació",
+        "confirming": "Eliminant..."
+      }
+    }
+  },
+  "DefaultHomePage": {
+    "header": {
+      "kicker": "Centre de comandament del roadmap",
+      "startFree": "Comença gratis",
+      "login": "Entrar"
+    },
+    "badge": "Espai modern de feedback",
+    "hero": {
+      "titlePrefix": "Converteix el caos del feedback en un",
+      "titleHighlight": "roadmap preparat per enviar",
+      "description": "UpQuit centralitza sol·licituds, discussió i vots en un sòl lloc perque els equips de producte puguin prioritzar millor i publicar amb confiança",
+      "primaryCta": "Crear workspace gratis",
+      "secondaryCta": "Obrir workspace"
+    },
+    "proofs": {
+      "0": "Fet per equips de producte",
+      "1": "Dissenyat per taulers orientats a clients",
+      "2": "Estructurat al voltant de decisions clares"
+    },
+    "flow": {
+      "title": "Com un tauler passa d'idea a pla",
+      "description": "Un flux enfocat manté cada sollicitud accionable sense dashboards de vanitat ni mètriques sorolloses"
+    },
+    "boardFlow": {
+      "capture": {
+        "label": "Captura",
+        "text": "Cada idea arriba a una cua compartida en lloc de perdre's entre xat, formularis i docs"
+      },
+      "discuss": {
+        "label": "Discuteix",
+        "text": "Equips i clients afegeixen context a cada sollicitud per mantenir decisions transparents"
+      },
+      "prioritize": {
+        "label": "Prioritza",
+        "text": "Mou les sollicituds principals a planificacio amb responsables clars i estat visible"
+      }
+    },
+    "usage": {
+      "title": "Com fan servir UpQuit els equips"
+    },
+    "roadmapSteps": {
+      "0": "Recull sollicituds de clients i equips interns",
+      "1": "Agrupa tendencies per impacte i urgencia",
+      "2": "Promou idees validades a feina planificada"
+    },
+    "highlights": {
+      "realtime": {
+        "title": "Col-laboracio en temps real",
+        "description": "Comentaris, vots i canvis d'estat se sincronitzen per a tothom al board"
+      },
+      "signal": {
+        "title": "Pensat per al senyal",
+        "description": "Filtra el soroll rapid amb estats estructurats, ownership i prioritats clares"
+      },
+      "multitenancy": {
+        "title": "Multitenencia segura",
+        "description": "Gestiona multiples comunitats de clients amb espais aillats i fluxos consistents"
+      }
+    },
+    "footer": {
+      "kicker": "Fet per equips que prioritzen amb context",
+      "text": "Crea un workspace, convida col-laboradors i comenca a donar forma al teu roadmap en un sol lloc"
+    }
+  }
+}

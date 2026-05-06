@@ -1,0 +1,48 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1774814857547,
+      "tag": "0000_init_core_tables",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1774814940266,
+      "tag": "0001_enable_rls_policies",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1774815000000,
+      "tag": "0002_request_changelogs",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1774815600000,
+      "tag": "0003_request_categories_many_to_many",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1777420800000,
+      "tag": "0004_cascade_delete_foreign_keys",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1777843956632,
+      "tag": "0005_notifications",
+      "breakpoints": true
+    }
+  ]
+}

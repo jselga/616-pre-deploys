@@ -1,0 +1,408 @@
+{
+  "GiveToGet": {
+    "title": "Tu progreso de contribución",
+    "loginHint": "Inicia sesion para seguir tu progreso de contribución en este tablero",
+    "unlocked": "¡Has desbloqueado la capacidad de publicar!",
+    "locked": "Necesitas {votes} votos más y {comments} comentarios más para publicar una solicitud"
+  },
+  "BoardsEntryGate": {
+    "title": "Tus tableros",
+    "subtitle": "Gestiona tus tableros personales y los tableros a los que te has unido.",
+    "importBoard": "Importar tablero",
+    "createBoard": "Crear tablero",
+    "dialogTitle": "Crear un nuevo tablero",
+    "dialogDescription": "Responde estas preguntas rápidas para configurar tu espacio",
+    "emptyTitle": "Aun no hay tableros",
+    "emptyDescription": "Todavía no has creado ningun tablero. Empieza creando el primero",
+    "personalTitle": "Tableros personales",
+    "personalDescription": "Tableros que posees y controlas.",
+    "personalEmpty": "Todavía no tienes tableros personales.",
+    "joinedTitle": "Tableros unidos",
+    "joinedDescription": "Tableros en los que participas como miembro.",
+    "joinedEmpty": "Todavía no te has unido a ningún tablero.",
+    "noDescription": "Sin descripción todavía"
+  },
+  "CreateBoardForm": {
+    "validation": {
+      "nameMin": "El nombre debe tener al menos 3 carácteres",
+      "slugMin": "El slug debe tener al menos 3 carácteres",
+      "slugPattern": "Usa solo minúsculas, números y guiones"
+    },
+    "errors": {
+      "unauthenticated": "No estás autenticado",
+      "createFailed": "Error al crear el tablero"
+    },
+    "success": {
+      "created": "Tablero creado correctamente"
+    },
+    "fields": {
+      "name": {
+        "label": "Nombre del producto",
+        "placeholder": "Ejemplo: Mi Increíble App"
+      },
+      "slug": {
+        "label": "URL / Slug",
+        "placeholder": "mi-app"
+      },
+      "description": {
+        "label": "Descripción (Opcional)",
+        "placeholder": "Un breve resumen de tu proyecto..."
+      }
+    },
+    "actions": {
+      "creating": "Creando...",
+      "create": "Crear tablero"
+    }
+  },
+  "LoginForm": {
+    "validation": {
+      "email": "Introduce un correo electrónico válido",
+      "password": "La contraseña es obligatoria"
+    },
+    "errors": {
+      "readToken": "No se pudo leer el token de autenticación",
+      "invalidToken": "Token de autenticación inválido",
+      "invalidCredentialsOrRegister": "No encontramos una cuenta con esos datos. Prueba a registrarte primero",
+      "generic": "No se pudo iniciar sesión ahora. Inténtalo de nuevo"
+    },
+    "title": "Bienvenido de nuevo",
+    "subtitle": "Inicia sesión en tu cuenta de UpQuit",
+    "fields": {
+      "email": {
+        "label": "Email",
+        "placeholder": "m@example.com"
+      },
+      "password": {
+        "label": "Contraseña",
+        "placeholder": "••••••••"
+      }
+    },
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "actions": {
+      "signingIn": "Iniciando sesión...",
+      "login": "Entrar",
+      "signUp": "Regístrate"
+    },
+    "orContinueWith": "O continua con",
+    "loginWithGoogle": "Entrar con Google",
+    "noAccount": "¿No tienes cuenta?",
+    "terms": {
+      "prefix": "Al continuar, aceptas nuestros",
+      "termsOfService": "Términos del servicio",
+      "and": "y",
+      "privacyPolicy": "Política de privacidad"
+    }
+  },
+  "RegisterForm": {
+    "validation": {
+      "displayName": "El nombre visible debe tener al menos 2 carácteres",
+      "email": "Introduce un correo electrónico válido",
+      "password": "La contraseña debe tener al menos 8 carácteres",
+      "confirmPassword": "Las contraseñas no coinciden"
+    },
+    "errors": {
+      "generic": "No se pudo registrar la cuenta ahora. Inténtalo de nuevo"
+    },
+    "success": {
+      "created": "Cuenta creada correctamente"
+    },
+    "title": "Crea tu cuenta",
+    "subtitle": "Introduce tus datos para crear tu cuenta",
+    "fields": {
+      "displayName": {
+        "label": "Nombre",
+        "placeholder": "Tu nombre"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "info@example.com"
+      },
+      "password": {
+        "label": "Contraseña",
+        "placeholder": "********"
+      },
+      "confirmPassword": {
+        "label": "Confirmar contraseña",
+        "placeholder": "********"
+      }
+    },
+    "actions": {
+      "creating": "Creando cuenta...",
+      "create": "Crear cuenta",
+      "signIn": "Inicia sesión"
+    },
+    "orContinueWith": "O continua con",
+    "signUpWithGoogle": "Registrarte con Google",
+    "alreadyHaveAccount": "¿Ya tienes cuenta?",
+    "terms": {
+      "prefix": "Al continuar, aceptas nuestros",
+      "termsOfService": "Términos del servicio",
+      "and": "y",
+      "privacyPolicy": "Política de privacidad"
+    }
+  },
+  "LogoutButton": {
+    "actions": {
+      "logout": "Cerrar sesión",
+      "loggingOut": "Cerrando sesión..."
+    },
+    "errors": {
+      "generic": "No se pudo cerrar sesión ahora. Inténtalo de nuevo"
+    }
+  },
+  "AppShell": {
+    "workspace": "Espacio de producto",
+    "section": "Plan",
+    "boards": {
+      "title": "Tableros",
+      "empty": "Aun no hay tableros"
+    },
+    "navigation": {
+      "dashboard": "Dashboard",
+      "overview": "Resumen",
+      "boards": "Tableros",
+      "requests": "Solicitudes",
+      "team": "Equipo",
+      "comments": "Comentarios",
+      "reports": "Informes",
+      "comingSoon": "Próximamente"
+    },
+    "user": {
+      "name": "Usuario del workspace",
+      "role": "Product owner"
+    },
+    "actions": {
+      "signOut": "Salir",
+      "logOut": "Cerrar sesión",
+      "dashboard": "Dashboard",
+      "settings": "Configuración",
+      "createBoard": "Crear tablero",
+      "createBoardShortcut": "Crear o cambiar tablero",
+      "logoutFailed": "No se pudo cerrar sesión ahora. Inténtalo de nuevo"
+    },
+    "settings": {
+      "title": "Configuración de perfil",
+      "description": "Actualiza los datos que aparecen en tu sidebar.",
+      "saved": "Perfil actualizado correctamente.",
+      "failed": "No se pudo guardar la configuración del perfil.",
+      "validation": {
+        "displayName": "El nombre visible debe tener al menos 2 carácteres"
+      },
+      "fields": {
+        "displayName": "Nombre visible",
+        "avatarUrl": "URL del avatar"
+      },
+      "actions": {
+        "cancel": "Cancelar",
+        "save": "Guardar cambios",
+        "saving": "Guardando..."
+      }
+    }
+  },
+  "UpvoteButton": {
+    "mustLogin": "Debes iniciar sesión para votar",
+    "voteError": "No se pudo registrar tu voto. Inténtalo de nuevo"
+  },
+  "RequestCard": {
+    "status": {
+      "planned": "planificado",
+      "in_progress": "en progreso",
+      "completed": "completado",
+      "rejected": "rechazado"
+    }
+  },
+  "BoardPage": {
+    "featureRequestsTitle": "Solicitudes de funcionalidades",
+    "emptyRequests": "Aun no hay solicitudes. ¡Se el primero en sugerir algo!",
+    "actions": {
+      "goToDashboard": "Ir al dashboard",
+      "editSettings": "Editar configuración"
+    }
+  },
+  "BoardMembersPage": {
+    "title": "Equipo",
+    "description": "Gestiona quién puede acceder a este tablero.",
+    "notFound": "No se encontró el tablero.",
+    "forbidden": "No tienes permiso para gestionar este tablero.",
+    "invite": {
+      "title": "Invitar a un miembro",
+      "description": "Añade a alguien al tablero por email.",
+      "placeholder": "nombre@ejemplo.com",
+      "action": "Añadir miembro",
+      "adding": "Añadiendo..."
+    },
+    "members": {
+      "title": "Miembros actuales",
+      "emptyTitle": "Aun no hay miembros",
+      "emptyDescription": "Invita a la primera persona del equipo para empezar.",
+      "role": "Rol",
+      "remove": "Eliminar"
+    },
+    "roles": {
+      "owner": "Propietario",
+      "admin": "Admin",
+      "member": "Miembro"
+    },
+    "success": {
+      "added": "Miembro añadido correctamente.",
+      "removed": "Has eliminado a {name} del tablero.",
+      "roleUpdated": "Has actualizado el rol de {name}."
+    },
+    "errors": {
+      "emailRequired": "Introduce un correo electrónico.",
+      "addFailed": "No se pudo añadir este miembro.",
+      "removeFailed": "No se pudo eliminar este miembro.",
+      "updateRoleFailed": "No se pudo actualizar el rol de este miembro."
+    }
+  },
+  "BoardSettingsPage": {
+    "title": "Configuración del tablero",
+    "description": "Gestiona la identidad del tablero, permisos y reglas de participación.",
+    "backToDashboard": "Volver al dashboard",
+    "notFound": "No se encontró el tablero.",
+    "forbidden": "No tienes acceso para editar este tablero.",
+    "saved": "Configuración del tablero guardada.",
+    "saveFailed": "No se pudo guardar la configuración del tablero.",
+    "sections": {
+      "profile": "Perfil",
+      "profileDescription": "Marca pública y detalles descriptivos.",
+      "permissions": "Acceso y votos",
+      "giveToGet": "Give to Get"
+    },
+    "fields": {
+      "name": "Nombre del tablero",
+      "slug": "Slug",
+      "description": "Descripción",
+      "logoUrl": "URL del logo",
+      "primaryColor": "Color principal",
+      "isPublic": "Tablero público",
+      "allowAnonymousVotes": "Permitir votos anónimos",
+      "giveToGetEnabled": "Activar Give to Get",
+      "giveToGetVotesReq": "Votos requeridos",
+      "giveToGetCommentsReq": "Comentarios requeridos"
+    },
+    "hints": {
+      "slug": "Se usa en la URL del tablero.",
+      "isPublic": "Permite que cualquiera con el enlace pueda ver tu tablero.",
+      "allowAnonymousVotes": "Visitantes sin cuenta pueden votar solicitudes.",
+      "giveToGetEnabled": "Requiere participación antes de poder crear solicitudes."
+    },
+    "placeholders": {
+      "name": "Ejemplo: Mi Increíble App",
+      "slug": "mi-increible-app",
+      "description": "Describe para qué es este tablero...",
+      "logoUrl": "https://example.com/logo.png"
+    },
+    "validation": {
+      "nameMin": "El nombre del tablero debe tener al menos 3 caracteres.",
+      "slugMin": "El slug debe tener al menos 3 caracteres.",
+      "slugMax": "El slug no puede superar 63 caracteres.",
+      "slugPattern": "Usa solo minúsculas, números y guiones.",
+      "descriptionMax": "La descripción no puede superar 300 caracteres.",
+      "logoUrl": "Introduce una URL válida para el logo.",
+      "primaryColor": "Introduce un color hexadecimal válido como #1e40af.",
+      "giveToGetVotesReq": "Los votos requeridos deben ser 0 o más.",
+      "giveToGetCommentsReq": "Los comentarios requeridos deben ser 0 o más.",
+      "giveToGetMinimumRule": "Cuando Give to Get está activado, votos y comentarios requeridos no pueden ser ambos 0."
+    },
+    "actions": {
+      "cancel": "Cancelar",
+      "save": "Guardar configuración",
+      "saving": "Guardando..."
+    },
+    "dangerZone": {
+      "title": "Zona peligrosa",
+      "description": "Elimina este tablero de forma permanente. También se borrarán todas las solicitudes, comentarios y votos asociados.",
+      "deleteBoard": "Eliminar tablero",
+      "dialogTitle": "¿Estás completamente seguro?",
+      "dialogDescription": "¿Seguro que quieres eliminar este tablero? Esta acción no se puede deshacer.",
+      "success": "Tablero eliminado correctamente",
+      "failed": "No se pudo eliminar el tablero.",
+      "actions": {
+        "cancel": "Cancelar",
+        "confirmDelete": "Confirmar eliminación",
+        "confirming": "Eliminando..."
+      }
+    }
+  },
+  "RequestDetailPage": {
+    "actions": {
+      "delete": "Eliminar solicitud"
+    },
+    "deleteDialog": {
+      "title": "¿Eliminar solicitud?",
+      "description": "¿Seguro que quieres eliminar esta solicitud? Sus comentarios y votos se borrarán de forma permanente.",
+      "success": "Solicitud eliminada correctamente",
+      "failed": "No se pudo eliminar la solicitud.",
+      "actions": {
+        "cancel": "Cancelar",
+        "confirmDelete": "Confirmar eliminación",
+        "confirming": "Eliminando..."
+      }
+    }
+  },
+  "DefaultHomePage": {
+    "header": {
+      "kicker": "Centro de control del roadmap",
+      "startFree": "Empieza gratis",
+      "login": "Entrar"
+    },
+    "badge": "Espacio moderno de feedback",
+    "hero": {
+      "titlePrefix": "Convierte el caos del feedback en un",
+      "titleHighlight": "roadmap que se envia",
+      "description": "UpQuit centraliza solicitudes, discusion y votos en un solo lugar para que los equipos de producto puedan priorizar mejor y lanzar con confianza.",
+      "primaryCta": "Crear workspace gratis",
+      "secondaryCta": "Abrir workspace"
+    },
+    "proofs": {
+      "0": "Creado para equipos de producto",
+      "1": "Disenado para boards orientados a clientes",
+      "2": "Estructurado alrededor de decisiones claras"
+    },
+    "flow": {
+      "title": "Como un board pasa de idea a plan",
+      "description": "Un flujo enfocado mantiene cada solicitud accionable sin depender de dashboards vacios ni metricas ruidosas."
+    },
+    "boardFlow": {
+      "capture": {
+        "label": "Captura",
+        "text": "Cada idea llega a una cola compartida, en lugar de perderse entre chat, formularios y docs."
+      },
+      "discuss": {
+        "label": "Discute",
+        "text": "Equipos y clientes anaden contexto en cada solicitud para mantener decisiones transparentes."
+      },
+      "prioritize": {
+        "label": "Prioriza",
+        "text": "Mueve las solicitudes principales a planificacion con responsables claros y estado visible."
+      }
+    },
+    "usage": {
+      "title": "Como usan UpQuit los equipos"
+    },
+    "roadmapSteps": {
+      "0": "Recoge solicitudes de clientes y equipos internos.",
+      "1": "Agrupa tendencias por impacto y urgencia.",
+      "2": "Promociona ideas validadas al trabajo planificado."
+    },
+    "highlights": {
+      "realtime": {
+        "title": "Colaboracion en tiempo real",
+        "description": "Comentarios, votos y cambios de estado se sincronizan para todos en el tablero"
+      },
+      "signal": {
+        "title": "Pensado para senal",
+        "description": "Filtra ruido rapidamente con estados estructurados, ownership y prioridades claras."
+      },
+      "multitenancy": {
+        "title": "Multitenencia segura",
+        "description": "Gestiona varias comunidades de clientes con espacios aislados y flujos consistentes."
+      }
+    },
+    "footer": {
+      "kicker": "Hecho para equipos que priorizan con contexto",
+      "text": "Crea un workspace, invita colaboradores y empieza a moldear tu roadmap en un solo lugar."
+    }
+  }
+}
